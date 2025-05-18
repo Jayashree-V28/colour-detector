@@ -19,7 +19,7 @@ def get_color_name(R, G, B, color_data):
     closest_color = None
     for _, row in color_data.iterrows():
         try:
-            d = ((R - int(row['R']))*2 + (G - int(row['G']))2 + (B - int(row['B']))2) * 0.5  # Euclidean distance
+            d = ((R - int(row['R']))**2 + (G - int(row['G']))**2 + (B - int(row['B']))2) * 0.5  # Euclidean distance
             if d < min_dist:
                 min_dist = d
                 closest_color = row
