@@ -21,7 +21,7 @@ def get_color_name(R, G, B, color_data):
         try:
            d = ((R - int(row['R']))**2 + (G - int(row['G']))**2 + (B - int(row['B']))**2) * 0.5
 
-            if d < min_dist:
+           if d < min_dist:
                 min_dist = d
                 closest_color = row
         except Exception as e:
